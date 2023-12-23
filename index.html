@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="src/style.css" rel="stylesheet" />
+    <link rel="icon" href="/ball.png" type="image/png" />
+    <title>Plinko</title>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: row; margin-top: 5vh">
+      <div id="app" style="margin-left: 10vw; width: 20vw; height: 80vh"></div>
+      <div
+        id="canvas"
+        style="
+          width: 60vw;
+          height: 80vh;
+          margin: 0 auto;
+          color: #fff;
+          background-color: #0F212E;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        "
+      ></div>
+      <div
+        id="overlay"
+        style="
+          position: absolute;
+          bottom: 15vh;
+          left: 40vw;
+          width: 36vw;
+          background-color: #082537;
+          pointer-events: none;
+          border-radius: 5px;
+          border: 1px solid #000000;
+          flex-direction: row;
+          gap: 10px;
+          padding: 20px;
+          display: none;
+        "
+      >
+        <div style="display: flex; flex-direction: column; gap: 2vh; width: 100%">
+          <div style="display: flex; width: 100%; justify-content: space-between">
+            <span style="color: #fff;">Profit to win</span>
+            <span style="color: #fff;" id="profit">$0.00</span>
+          </div>
+          <input
+            style="
+              background-color: #05121c;
+              height: 30px;
+              width: 100%;
+              border: none;
+              border-radius: 5px;
+              color: #fff;
+            "
+            id="bitProfit"
+            type="text"
+            value="25.00000"
+            readonly
+          />
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 2vh; width: 100%">
+          <span style="color: #fff;">Chance</span>
+          <input
+            style="
+              background-color: #05121c;
+              height: 30px;
+              width: 100%;
+              border: none;
+              border-radius: 5px;
+              color: #fff;
+            "
+            id="chance"
+            type="text"
+            value="0.396"
+            readonly
+          />
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
